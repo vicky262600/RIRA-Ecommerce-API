@@ -4,7 +4,7 @@ const Cart = require("../models/Cart");
 const router = require("express").Router();
 
 // Create
-router.post("/", verifyTokenAndAdmin, async(req, res)=>{
+router.post("/", verifyToken, async(req, res)=>{
     const newCart = new Cart(req.body);
     try{
         const savedCard = await newCart.save();
