@@ -17,12 +17,7 @@ mongoose.connect(
     .catch((err)=>{console.log(err);
 });
 
-app.use(cors({
-    origin: ["https://redux-fe.vercel.app"],
-    methods: ["GET", "PUT", "POST", "DELETE"],
-    credentials: true
-}));
-
+app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
