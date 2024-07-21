@@ -6,13 +6,5 @@
   "routes": [
       { "src": "/api/(.*)", "dest": "index.js" },
       { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "functions": {
-      "api/auth/login": {
-          "maxDuration": 30
-      }
-  },
-  "env": {
-      "DATABASE_URL": "@database_url"
-  }
+  ]
 }
